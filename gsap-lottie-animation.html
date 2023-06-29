@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body style="padding-top: 30px;">
+  <div class="container">
+    <div class="text-center">
+      <h3>In this Animation</h3>
+      <p>the stars are from lottie animation and the motion of them is governed by Gsap methods</p>
+    </div>
+  </div>
+  <!-- star y-axis top -->
+  <div class="container">
+  <div class="row" style="padding-left: 35%;">
+    <div class="col star-top">  <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_SWAcBE.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"    autoplay></lottie-player>    
+  </div>
+  </div>
+  <!-- stars in x-axis -->
+  <div class="row" style="padding-left: 3rem;">
+    <div class="star-left col-4 ">  <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_SWAcBE.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"   autoplay></lottie-player> </div>
+    <div class="col-4">  <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_iitvvhba.json"  background="transparent"  speed="2"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player></div>
+    <div class="star-right col-4">  <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_SWAcBE.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"   autoplay></lottie-player> </div>
+  </div>
+
+  <!-- star y-axis bottom -->
+  <div class="container">
+  <div class="row" style="padding-left: 35%;">
+    <div class="col star-bottom">  <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_SWAcBE.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  autoplay></lottie-player> </div>
+  </div>
+  </div>
+
+  <!-- CDN link to lottie Animations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- CDN link to Gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+
+  <!-- // gsap animations -->
+  <script>
+    //moving the stars along x axis
+      gsap.to(".star-left",{x:-100,repeat:1000, yoyo:false,duration:1});
+      gsap.to(".star-right",{x:100,repeat:1000, yoyo:false, duration:1});
+    
+      //moving the stars along y axis
+      gsap.to(".star-top",{y:-100 ,repeat:1000, yoyo:false, duration:1});
+      gsap.to(".star-bottom",{y:100,repeat:1000, yoyo:false, duration:1});    
+  </script>
+
+ 
+</body>
+</html>
